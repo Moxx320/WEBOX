@@ -14,13 +14,13 @@
       <li class="nav-item{{ $activePage == 'dashboard' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('home') }}">
           <i class="material-icons">dashboard</i>
-            <p>{{ __('WEBOX') }}</p>
+            <p>{{ __('INICIO') }}</p>
         </a>
       </li>
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
           <i><img style="width:25px" src="{{ asset('img/laravel.svg') }}"></i>
-          <p>{{ __('Laravel Examples') }}
+          <p>{{ __('ROLES USUARIO') }}
             <b class="caret"></b>
           </p>
         </a>
@@ -28,14 +28,14 @@
           <ul class="nav">
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
               <a class="nav-link" href="#">
-                <span class="sidebar-mini"> UP </span>
-                <span class="sidebar-normal">{{ __('User profile') }} </span>
+                <span class="sidebar-mini"> UAL </span>
+                <span class="sidebar-normal">{{ __('User Alumno') }} </span>
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
               <a class="nav-link" href="#">
-                <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('User Management') }} </span>
+                <span class="sidebar-mini"> UAD </span>
+                <span class="sidebar-normal"> {{ __('User Administrador') }} </span>
               </a>
             </li>
           </ul>
@@ -53,7 +53,7 @@
       <li class="nav-item{{ $activePage == 'posts' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('posts.index') }}">
           <i class="material-icons">library_books</i>
-            <p>{{ __('Post') }}</p>
+            <p>{{ __('Reserva') }}</p>
         </a>
       </li>
       @endcan
@@ -76,13 +76,13 @@
       <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
         <a class="nav-link" href="#">
           <i class="material-icons">notifications</i>
-          <p>{{ __('Notifications') }}</p>
+          <p>{{ __('Notificationes') }}</p>
         </a>
       </li>
       <li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
         <a class="nav-link" href="#">
           <i class="material-icons">language</i>
-          <p>{{ __('RTL Support') }}</p>
+          <p>{{ __('Historial') }}</p>
         </a>
       </li>
     </ul>
