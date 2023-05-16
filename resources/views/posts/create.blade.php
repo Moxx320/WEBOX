@@ -10,16 +10,16 @@
           <div class="card ">
             <!--Header-->
             <div class="card-header card-header-primary">
-              <h4 class="card-title">Lista de Equipos</h4>
-              <p class="card-category">Ingresar Nuevo Equipo</p>
+              <h4 class="card-title">Post</h4>
+              <p class="card-category">Ingresar datos del nuevo post</p>
             </div>
-            <!--End header--> 
+            <!--End header-->
             <!--Body-->
             <div class="card-body">
               <div class="row">
-                <label for="title" class="col-sm-2 col-form-label">EQUIPOS</label>
+                <label for="title" class="col-sm-2 col-form-label">Post title</label>
                 <div class="col-sm-7">
-                  <input type="text" class="form-control" name="title" placeholder="Ingrese el nombre del equipo"
+                  <input type="text" class="form-control" name="title" placeholder="Ingrese el post title"
                     autocomplete="off" autofocus>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-@extends('layouts.main', ['class' => 'off-canvas-sidebar', 'activePage' => 'register', 'title' => __('')])
+@extends('layouts.main', ['class' => 'off-canvas-sidebar', 'activePage' => 'register', 'title' => __('WEBOX')])
 
 @section('content')
 <div class="container" style="height: auto;">
@@ -9,15 +9,21 @@
 
                 <div class="card card-login card-hidden mb-3">
                     <div class="card-header card-header-primary text-center">
-                        <h4 class="card-title"><strong>{{ __('REGISTRO') }}</strong></h4>
+                        <h4 class="card-title"><strong>{{ __('Registro') }}</strong></h4>
                         <div class="social-line">
+                            <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+                                <i class="fa fa-twitter"></i>
+                            </a>
                             <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
                                 <i class="fa fa-google-plus"></i>
                             </a>
                         </div>
                     </div>
                     <div class="card-body ">
-                        <p class="card-description text-center">{{ __('Ingresar datos') }}</p>
+                        <p class="card-description text-center">{{ __('Registra los campos') }}</p>
                         <div class="bmd-form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -42,7 +48,7 @@
                                         <i class="material-icons">fingerprint</i>
                                     </span>
                                 </div>
-                                <input type="text" name="username" class="form-control" placeholder="{{ __('Usuario...') }}"
+                                <input type="text" name="username" class="form-control" placeholder="{{ __('Nombre de Usuario...') }}"
                                     value="{{ old('username') }}" required autocomplete="username">
                             </div>
                             @if ($errors->has('username'))
@@ -115,7 +121,7 @@
                     </div>
                     <div class="card-footer justify-content-center">
                         <button type="submit"
-                            class="btn btn-primary btn-link btn-lg">{{ __('Crear Cuenta') }}</button>
+                            class="btn btn-primary btn-link btn-lg">{{ __('Terminar Registro') }}</button>
                     </div>
                 </div>
             </form>

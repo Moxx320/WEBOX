@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => ''])
+@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => 'Posts'])
 
 @section('content')
 <div class="content">
@@ -7,14 +7,14 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header card-header-primary">
-            <h4 class="card-title">Equipos de Computo</h4>
-            <p class="card-category">Lista de equipos registrados</p>
+            <h4 class="card-title">Posts</h4>
+            <p class="card-category">Lista de posts registrados en la base de datos</p>
           </div>
           <div class="card-body">
             <div class="row">
               <div class="col-12 text-right">
                 @can('post_create')
-                <a href="{{ route('posts.create') }}" class="btn btn-sm btn-facebook">Añadir equipo</a>
+                <a href="{{ route('posts.create') }}" class="btn btn-sm btn-facebook">Añadir post</a>
                 @endcan
               </div>
             </div>
@@ -23,7 +23,7 @@
                 <thead class="text-primary">
                   <th> ID </th>
                   <th> Nombre </th>
-                  <th> Estatus </th>
+                  <th> Fecha de creación </th>
                   <th class="text-right"> Acciones </th>
                 </thead>
                 <tbody>
