@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -30,6 +30,17 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::resource('posts', App\Http\Controllers\PostController::class);
 
+
+
     Route::resource('permissions', App\Http\Controllers\PermissionController::class);
     Route::resource('roles', App\Http\Controllers\RoleController::class);
+
+
+    Route::get('/reservas', [App\Http\Controllers\ReservaController::class, 'index'])->name('reservas.index');
+    Route::get('/reservas/create', [App\Http\Controllers\ReservaController::class, 'create'])->name('reservas.create');
+    Route::post('/reservas', [App\Http\Controllers\ReservaController::class, 'store'])->name('reservas.store');
+    Route::get('/reservas/{reserva}/edit', [App\Http\Controllers\ReservaController::class, 'edit'])->name('reservas.edit');
+    Route::put('/reservas/{reserva}', [App\Http\Controllers\ReservaController::class, 'update'])->name('reservas.update');
+    Route::delete('/reservas/{reserva}', [App\Http\Controllers\ReservaController::class, 'destroy'])->name('reservas.destroy');
+    
 });

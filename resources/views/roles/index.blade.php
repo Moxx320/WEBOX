@@ -22,10 +22,10 @@
               <table class="table ">
                 <thead class="text-primary">
                   <th> ID </th>
-                  <th> Nombre </th>
-                  <th> Guard </th>
-                  <th> Fecha de creación </th>
-                  <th> Permisos </th>
+                  <th> Rol </th>
+                  <th> Asignacion </th>
+                  <th> Fecha de creacion </th>
+                  <th class="text-center" > Permisos </th>
                   <th class="text-right"> Acciones </th>
                 </thead>
                 <tbody>

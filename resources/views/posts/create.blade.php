@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => 'Nuevo Post'])
+@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => 'Nueva Asignacion'])
 
 @section('content')
 <div class="content">
@@ -10,16 +10,16 @@
           <div class="card ">
             <!--Header-->
             <div class="card-header card-header-primary">
-              <h4 class="card-title">Post</h4>
-              <p class="card-category">Ingresar datos del nuevo post</p>
+              <h4 class="card-title">Equipos</h4>
+              <p class="card-category">Ingresar datos del nuevo equipo de computo</p>
             </div>
             <!--End header-->
             <!--Body-->
             <div class="card-body">
               <div class="row">
-                <label for="title" class="col-sm-2 col-form-label">Post title</label>
+                <label for="title" class="col-sm-2 col-form-label">Asignacion</label>
                 <div class="col-sm-7">
-                  <input type="text" class="form-control" name="title" placeholder="Ingrese el post title"
+                  <input type="text" class="form-control" name="title" placeholder="Ingrese el nombre del equipo"
                     autocomplete="off" autofocus>
                 </div>
               </div>

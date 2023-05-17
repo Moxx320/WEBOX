@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => 'Detalles del post'])
+@extends('layouts.main', ['activePage' => 'posts', 'titlePage' => 'Detalles de los equipos'])
 @section('content')
 <div class="content">
   <div class="container-fluid">
@@ -7,7 +7,7 @@
         <div class="card">
           <!--Header-->
           <div class="card-header card-header-primary">
-            <h4 class="card-title">Posts</h4>
+            <h4 class="card-title">Asignacion de Equipos</h4>
             <p class="card-category">Vista detallada de {{ $post->title }}</p>
           </div>
           <!--End header-->
@@ -29,14 +29,14 @@
                           <h5 class="title mt-3">{{ $post->title }}</h5>
                         </a>
                         <p class="description">
-                          {{ _('Ceo/Co-Founder') }} <br>
+                          {{ ('Asignacion') }} <br>
                           {{ $post->title }} <br>
                           {{ $post->created_at }}
                         </p>
                       </div>
                     </p>
                     <div class="card-description">
-                      {{ _('Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...') }}
+                      {{ ('Equipo de computo asignado para su uso en el laboratorio de Computo del instituto Tecnologico Superior de Lerdo') }}
                     </div>
                   </div>
                   <div class="card-footer">

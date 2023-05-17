@@ -3,27 +3,12 @@
         <nav class="float-left">
             <ul>
                 <li>
-                    <a href="https://www.creative-tim.com">
-                        {{ __('Creative Tim') }}
+                    <a href="https://www.lerdo.tecnm.mx/">
+                        {{ __('TECNM LERDO') }}
                     </a>
                 </li>
-                <li>
-                    <a href="https://creative-tim.com/presentation">
-                        {{ __('About Us') }}
-                    </a>
-                </li>
-                <li>
-                    <a href="http://blog.creative-tim.com">
-                        {{ __('Blog') }}
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.creative-tim.com/license">
-                        {{ __('Licenses') }}
-                    </a>
-                </li>
-            </ul>
-        </nav>
+            
+            </nav>
         <div class="copyright float-right">
         &copy;
         <script>

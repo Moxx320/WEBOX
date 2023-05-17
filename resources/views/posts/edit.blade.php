@@ -10,8 +10,8 @@
           <div class="card">
             <!--Header-->
             <div class="card-header card-header-primary">
-              <h4 class="card-title">Editar post</h4>
-              <p class="card-category">Editar datos del post</p>
+              <h4 class="card-title">Editar Asignaciones</h4>
+              <p class="card-category">Editar datos del equipo</p>
             </div>
             <!--End header-->
             <!--Body-->

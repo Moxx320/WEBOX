@@ -34,11 +34,11 @@
                       </div>
                     </p>
                     <div class="card-description">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia corporis molestiae aliquid provident placeat.
+                       Dentro de este campo se registra la informacion del usuario
                     </div>
                   </div>
                   <div class="card-footer">
-                    <div class="button-container">
+                    <div class="bsutton-container">
                       <button class="btn btn-sm btn-primary">Editar</button>
                     </div>
                   </div>
@@ -62,8 +62,7 @@
                       </div>
                     </p>
                     <div class="card-description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia corporis molestiae aliquid provident
-                      placeat.
+                      Dentro de este campo se registra fecha de creacion del usuario
                     </div>
                   </div>
                   <div class="card-footer">

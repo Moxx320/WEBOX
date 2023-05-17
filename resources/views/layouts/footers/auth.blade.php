@@ -3,33 +3,11 @@
     <nav class="float-left">
       <ul>
         <li>
-          <a href="https://www.creative-tim.com">
-              {{ __('WEBOX') }}
+          <a href="https://ead.lerdo.tecnm.mx/moodle/">
+              {{ __('EDC TECNM LERDO') }}
           </a>
-        </li>
-        <li>
-          <a href="https://creative-tim.com/presentation">
-              {{ __('About Us') }}
-          </a>
-        </li>
-        <li>
-          <a href="http://blog.creative-tim.com">
-              {{ __('Blog') }}
-          </a>
-        </li>
-        <li>
-          <a href="https://www.creative-tim.com/license">
-              {{ __('Licenses') }}
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <div class="copyright float-right">
-      &copy;
-      <script>
-        document.write(new Date().getFullYear())
-      </script>, WEBOX<i class="material-icons">favorite</i>
-      <a href="https://www.creative-tim.com" target="_blank">WEBOX</a>
+
+      <a href="https://ead.lerdo.tecnm.mx/moodle/" target="_blank"></a>
     </div>
   </div>
 </footer>

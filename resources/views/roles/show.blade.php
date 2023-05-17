@@ -26,10 +26,10 @@
                         <div class="block block-four"></div>
                         <a href="#">
                           <img class="avatar" src="{{ asset('/img/default-avatar.png') }}" alt="">
-                          <h5 class="title mt-3">Rol: {{ $role->name }}</h5>
+                          <h5 class="title mt-3">Permisos de: {{ $role->name }}</h5>
                         </a>
                         <p class="description">
-                          {{ _('Ceo/Co-Founder') }} <br>
+                          {{ ('Descripcion de rol') }} <br>
                           {{ $role->guard_name }} <br>
                           {{ $role->created_at }}
                         </p>
