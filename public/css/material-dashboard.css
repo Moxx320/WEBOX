@@ -268,7 +268,7 @@ button,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+appearance: button;
 }
 
 button::-moz-focus-inner,
@@ -289,7 +289,7 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  -webkit-appearance: listbox;
+appearance: listbox;
 }
 
 textarea {
@@ -327,7 +327,7 @@ progress {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 [type="search"]::-webkit-search-cancel-button,
@@ -672,7 +672,7 @@ button,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+appearance:button;
 }
 
 button::-moz-focus-inner,
@@ -693,7 +693,7 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  -webkit-appearance: listbox;
+appearance: listbox;
 }
 
 textarea {
@@ -731,7 +731,7 @@ progress {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 [type="search"]::-webkit-search-cancel-button,
@@ -5366,7 +5366,7 @@ button.close {
   padding: 0;
   background-color: transparent;
   border: 0;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 .badge {
@@ -12899,8 +12899,8 @@ label {
 
 select,
 select.form-control {
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  appearance: none;
+  appearance: none;
 }
 
 @media (min-width: 576px) {
@@ -18745,7 +18745,7 @@ Copyright (c) 2015 Daniel Eden
     display: none;
   }
   .navbar-fixed-top {
-    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   #bodyClick {
     height: 100%;
@@ -18856,6 +18856,6 @@ Copyright (c) 2015 Daniel Eden
     margin-bottom: 0;
     list-style: none;
 }
-
+}
 
 /*# sourceMappingURL=dashboard-free.css.map */

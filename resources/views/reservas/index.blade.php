@@ -1,4 +1,4 @@
-@extends('layouts.main', ['activePage' => 'reservas', 'titlePage' => 'Seccion de de Reservas'])
+@extends('layouts.main', ['activePage' => 'reservas', 'titlePage' => 'Seccion de Reservas'])
 @section('content')
 <div class="content">
     <div class="container-fluid">
