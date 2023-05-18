@@ -7,7 +7,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="card">
-                  <div class="card-header card-header-primary">
+                  <div class="card-header card-header-success">
                     <h4 class="card-title">Usuarios</h4>
                     <p class="card-category">Usuarios registrados</p>
                   </div>

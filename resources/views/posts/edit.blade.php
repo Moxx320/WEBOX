@@ -9,7 +9,7 @@
           @method('PUT')
           <div class="card">
             <!--Header-->
-            <div class="card-header card-header-primary">
+            <div class="card-header card-header-success">
               <h4 class="card-title">Editar Asignaciones</h4>
               <p class="card-category">Editar datos del equipo</p>
             </div>

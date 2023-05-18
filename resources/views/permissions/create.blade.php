@@ -8,7 +8,7 @@
         <form action="{{ route('permissions.store') }}" method="post" class="form-horizontal">
           @csrf
           <div class="card">
-            <div class="card-header card-header-primary">
+            <div class="card-header card-header-success">
               <h4 class="card-title">Permiso</h4>
               <p class="card-category">Ingresar datos</p>
             </div>

@@ -9,7 +9,7 @@
           @csrf
           <div class="card ">
             <!--Header-->
-            <div class="card-header card-header-primary">
+            <div class="card-header card-header-success">
               <h4 class="card-title">Equipos</h4>
               <p class="card-category">Ingresar datos del nuevo equipo de computo</p>
             </div>
