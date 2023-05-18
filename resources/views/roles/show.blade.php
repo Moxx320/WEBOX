@@ -15,7 +15,7 @@
           <div class="card-body">
             <div class="row">
               <!-- first -->
-              <div class="col-md-4">
+              <div class="col-md-12">
                 <div class="card card-user">
                   <div class="card-body">
                     <p class="card-text">

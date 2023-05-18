@@ -575,7 +575,7 @@ a:hover {
 }
 
 a:not([href]):not([tabindex]) {
-  color: inherit;
+  color: white;
   text-decoration: none;
 }
 
@@ -5433,8 +5433,8 @@ button.close {
 }
 
 .badge-info {
-  color: #ffffff;
-  background-color: #3b813e;
+  color: #44430e;
+  background-color: #ffe500;
 }
 
 .badge-info[href]:hover,
@@ -6243,7 +6243,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #ffe500 !important;
 }
 
 a.bg-dark:hover,
@@ -8662,7 +8662,7 @@ button.bg-dark:focus {
 }
 
 .text-white {
-  color: #fff !important;
+  color: #44430e !important;
 }
 
 .text-primary {
@@ -10894,7 +10894,7 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
 }
 
 .form-check .form-check-input:checked+.form-check-sign .check {
-  background: #4caf50;
+  background: #ffffff;
 }
 
 .form-check .form-check-input:checked+.form-check-sign .check:before {
@@ -13747,7 +13747,7 @@ h2.title {
 .description,
 .card-description,
 .footer-big p {
-  color: #999999;
+  color: #ffffff;
 }
 
 .text-warning {
@@ -14380,7 +14380,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .footer ul li a {
-  color: #ffffff75;
+  color: white;
   padding: 0.9375rem;
   font-weight: 500;
   font-size: 12px;
