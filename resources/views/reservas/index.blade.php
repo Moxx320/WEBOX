@@ -6,19 +6,19 @@
         <div class="col-md-12">
              <!-- resources/views/reservas/index.blade.php -->
 
-<h1>Lista de Reservas</h1>
+<h1 class="text-center"><b>Lista de Reservas</b></h1>
 
-<a href="{{ route('reservas.create') }}">Crear Reserva</a>
+<p align="right"><a href="{{ route('reservas.create') }}"><button type="button" class="btn btn-success">Crear Reserva</button></a></p>
+
 
 @if(session('success'))
     <div>{{ session('success') }}</div>
 @endif
 
-<table>
+<table class="table table-success">
     <thead>
         <tr>
             <th>Folio</th>
-            <th></th>
             <th>Cancelación</th>
             <th>Inicio Apartado</th>
             <th>Fin Apartado</th>
@@ -38,11 +38,11 @@
             <td>{{ $reserva->fecha }}</td>
             <td>{{ $reserva->estatus }}</td>
             <td>
-                <a href="{{ route('reservas.edit', $reserva->folio) }}">Editar</a>
+                <a href="{{ route('reservas.edit', $reserva->folio) }}"><button type="button" class="btn btn-info">Editar</button></a>
                 <form action="{{ route('reservas.destroy', $reserva->folio) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit">Eliminar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
                 </form>
             </td>
         </tr>

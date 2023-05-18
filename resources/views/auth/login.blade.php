@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <p class="card-description text-center">{{ __('Ingresa tus Credenciales') }}</p>
+                        <p class="card-description text-center">{{ __('Ingresa tus Datos') }}</p>
                         {{-- <div class="bmd-form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -62,7 +62,7 @@
                                     </span>
                                 </div>
                                 <input type="password" name="password" id="password" class="form-control"
-                                    placeholder="{{ __('Contraseña') }}" required autocomplete="current-password">
+                                    placeholder="{{ __('Contraseña...') }}" required autocomplete="current-password">
                             </div>
                             @if ($errors->has('password'))
                             <div id="password-error" class="error text-danger pl-3" for="password"

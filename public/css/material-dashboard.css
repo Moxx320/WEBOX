@@ -777,7 +777,7 @@ h6,
   font-family: inherit;
   font-weight: 400;
   line-height: 1.2;
-  color: inherit;
+  color: white;
 }
 
 h1,
@@ -8729,7 +8729,7 @@ a.text-light:focus {
 }
 
 .text-dark {
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 a.text-dark:hover,
@@ -13755,7 +13755,7 @@ h2.title {
 }
 
 .text-primary {
-  color: white !important;
+  color: black !important;
 }
 
 .text-danger {
@@ -16286,7 +16286,7 @@ thead.thead-inverse th,
 
 body {
   background-color: #333333;
-  color: #3C4858;
+  color: #000000;
   font-weight: 300;
 }
 
@@ -16624,8 +16624,8 @@ label {
   margin-bottom: 30px;
   margin-top: 30px;
   border-radius: 6px;
-  color: white;
-  background: #3f3f3f;
+  color: #080808;
+  background: #ffffff;
   width: 100%;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
