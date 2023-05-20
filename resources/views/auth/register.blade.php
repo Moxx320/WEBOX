@@ -9,7 +9,7 @@
 
                 <div class="card card-login card-hidden mb-3">
                     <div class="card-header card-header-success text-center">
-                        <h4 class="card-title"><strong>{{ __('Registro') }}</strong></h4>
+                        <h4 class="card-title"><strong>{{ ('Registro') }}</strong></h4>
                         <div class="social-line">
                             <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
                                 <i class="fa fa-google-plus"></i>
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <div class="card-body ">
-                        <p class="card-description text-center">{{ __('Registra los campos') }}</p>
+                        <p class="card-description text-center">{{ ('Registra los campos') }}</p>
                         <div class="bmd-form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -42,7 +42,7 @@
                                         <i class="material-icons">fingerprint</i>
                                     </span>
                                 </div>
-                                <input type="text" name="username" class="form-control" placeholder="{{ __('Nombre de Usuario...') }}"
+                                <input type="text" name="username" class="form-control" placeholder="{{ ('Nombre de Usuario...') }}"
                                     value="{{ old('username') }}" required autocomplete="username">
                             </div>
                             @if ($errors->has('username'))
@@ -58,7 +58,7 @@
                                         <i class="material-icons">email</i>
                                     </span>
                                 </div>
-                                <input type="email" name="email" class="form-control" placeholder="{{ __('Correo...') }}"
+                                <input type="email" name="email" class="form-control" placeholder="{{ ('Correo...') }}"
                                     value="{{ old('email') }}" required autocomplete="email">
                             </div>
                             @if ($errors->has('email'))
@@ -75,7 +75,7 @@
                                     </span>
                                 </div>
                                 <input type="password" name="password" id="password" class="form-control"
-                                    placeholder="{{ __('Contraseña...') }}" required autocomplete="new-password">
+                                    placeholder="{{ ('Contraseña...') }}" required autocomplete="new-password">
                             </div>
                             @if ($errors->has('password'))
                             <div id="password-error" class="error text-danger pl-3" for="password"
@@ -93,7 +93,7 @@
                                     </span>
                                 </div>
                                 <input type="password" name="password_confirmation" id="password_confirmation"
-                                    class="form-control" placeholder="{{ __('Confirmar Contraseña...') }}" required autocomplete="new-password">
+                                    class="form-control" placeholder="{{ ('Confirmar Contraseña...') }}" required autocomplete="new-password">
                             </div>
                             @if ($errors->has('password_confirmation'))
                             <div id="password_confirmation-error" class="error text-danger pl-3"

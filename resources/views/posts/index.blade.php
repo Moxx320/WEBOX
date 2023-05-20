@@ -23,7 +23,7 @@
                 <thead class="text-dark" >
                   <th><b> ID </b></th>
                   <th><b> Nombre </b></th>
-                  <th><b> Registro de equipo </b></th>
+                  <th><b> Fecha de Registro </b></th>
                   <th class="text-right"><b> Acciones </b></th>
                 </thead>
                 <tbody>

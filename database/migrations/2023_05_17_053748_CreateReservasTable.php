@@ -20,7 +20,7 @@ class CreateReservasTable  extends Migration
             $table->time('inicio_apartado');
             $table->time('fin_apartado');
             $table->date('fecha');
-            $table->char('estatus', 2)->default('2');
+            $table->char('estatus', 2)->default('DI');
             $table->timestamps();
         });
     }
