@@ -32,14 +32,13 @@
         <li class="nav-item dropdown">
           <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="material-icons">notifications</i>
-            <span class="notification">2</span>
+            <span class="notification">1</span>
             <p class="d-lg-none d-md-block">
               {{ __('Some Actions') }}
             </p>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="http://localhost:8000/posts">{{ ('Hay equipos disponibles') }}</a>
-            <a class="dropdown-item" href="#">{{ ('Recaudaste 20 Hrs de uso') }}</a>
           </div>
         </li>
         <li class="nav-item dropdown">

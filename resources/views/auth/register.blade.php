@@ -115,7 +115,7 @@
                     </div>
                     <div class="card-footer justify-content-center">
                         <button type="submit"
-                            class="btn btn-primary btn-link btn-lg">{{ __('Terminar Registro') }}</button>
+                            class="btn btn-primary btn-link btn-lg">{{ __('Registrarse') }}</button>
                     </div>
                 </div>
             </form>
