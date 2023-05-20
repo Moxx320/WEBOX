@@ -19,9 +19,10 @@
     <thead>
         <tr>
             <th>Folio</th>
-            <th>Cancelación</th>
-            <th>Inicio Apartado</th>
-            <th>Fin Apartado</th>
+            <th>Tiempo de Tolerancia</th>
+            <th>Cancelacion</th>
+            <th>Inicio de Apartado</th>
+            <th>Fin de Apartado</th>
             <th>Fecha</th>
             <th>Estatus</th>
             <th>Acciones</th>
@@ -42,7 +43,7 @@
                 <form action="{{ route('reservas.destroy', $reserva->folio) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                    <button type="submit" class="btn btn-danger">Cancelar</button>
                 </form>
             </td>
         </tr>

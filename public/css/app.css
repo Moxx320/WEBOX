@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -283,7 +283,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+appearance: button;
 }
 
 button:not(:disabled),
@@ -342,11 +342,11 @@ progress {
 
 [type=search] {
   outline-offset: -2px;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 [type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
+appearance: none;
 }
 
 ::-webkit-file-upload-button {
@@ -3940,8 +3940,8 @@ input[type=button].btn-block {
   display: block;
   min-height: 1.44rem;
   padding-left: 1.5rem;
-  -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+  color-scheme: exact;
+  color-scheme: exact;
 }
 
 .custom-control-inline {
