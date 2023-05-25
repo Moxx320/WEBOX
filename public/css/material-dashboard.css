@@ -18857,4 +18857,162 @@ Copyright (c) 2015 Daniel Eden
 }
 }
 
+input[type=time] {
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: helvetica;
+  width: 200px;
+  background-color: #565656;
+  border-radius: 10%;
+  height: 50px;
+  font-weight: bold;
+}
+
+/* Wrapper around the hour, minute, second, and am/pm fields as well as 
+the up and down buttons and the 'X' button */
+input[type=time]::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+}
+
+/* The space between the fields - between hour and minute, the minute and 
+second, second and am/pm */
+input[type=time]::-webkit-datetime-edit-text {
+  padding: 15px 4px;
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
+`-webkit-datetime-edit-{field}-field` */
+
+/* Hour */
+input[type=time]::-webkit-datetime-edit-hour-field {
+  background-color: #4caf50;
+  border-radius: 15%;
+  padding: 19px 13px;
+  height: 5px;
+  position: inherit;
+  font-weight: bold;
+}
+
+/* Minute */
+input[type=time]::-webkit-datetime-edit-minute-field {
+  background-color: #4caf50;
+  border-radius: 15%;
+  padding: 19px 13px;
+  height: 5px;
+  position:relative;
+  font-weight: bold;
+}
+
+/* AM/PM */
+input[type=time]::-webkit-datetime-edit-ampm-field {
+  background-color: #4caf50;
+  border-radius: 15%;
+  color: #fff;
+  padding: 19px 13px;
+  height: 5px;
+  position: inherit;
+  font-weight: bold;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: brightness(0) invert(1);
+  position: relative;
+  right: 5px;
+  font-weight: bold;
+}
+
+#cancelacion {
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: helvetica;
+  width: 100px;
+  height: 50px;
+  background-color: #565656;
+  font-weight: bold;
+  text-align:center;
+  border-radius: 15%;
+}
+
+#cancelacion.dropdown {
+  background-color: #565656;
+  font-family: helvetica;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#boton_guardar {
+  position: relative;
+  left: 750px;
+}
+
+#boton_volver {
+  position: relative;
+}
+
+input[type=date] {
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: helvetica;
+  width: 210px;
+  background-color: #565656;
+  border-radius: 10%;
+  height: 50px;
+  font-weight: bold;
+}
+
+/* Wrapper around the hour, minute, second, and am/pm fields as well as 
+the up and down buttons and the 'X' button */
+input[type=date]::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+}
+
+/* The space between the fields - between hour and minute, the minute and 
+second, second and am/pm */
+input[type=date]::-webkit-datetime-edit-text {
+  padding: 15px 4px;
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
+`-webkit-datetime-edit-{field}-field` */
+
+/* Day */
+input[type=date]::-webkit-datetime-edit-day-field {
+  background-color: #4caf50;
+  border-radius: 15%;
+  padding: 19px 13px;
+  height: 5px;
+  position: inherit;
+  font-weight: bold;
+}
+
+/* Month */
+input[type=date]::-webkit-datetime-edit-month-field {
+  background-color: #4caf50;
+  border-radius: 15%;
+  padding: 19px 13px;
+  height: 5px;
+  position:relative;
+  font-weight: bold;
+}
+
+/* Year */
+input[type=date]::-webkit-datetime-edit-year-field {
+  background-color: #4caf50;
+  border-radius: 15%;
+  color: #fff;
+  padding: 19px 13px;
+  height: 5px;
+  position: inherit;
+  font-weight: bold;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: brightness(0) invert(1);
+  position: relative;
+  right: 5px;
+  font-weight: bold;
+}
 /*# sourceMappingURL=dashboard-free.css.map */
