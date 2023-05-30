@@ -95,8 +95,6 @@ class PermissionController extends Controller
      */
     public function destroy(Permission $permission)
     {
-        abort_if(Gate::denies('permission_delete'), 403);
-
         $permission->delete();
 
         return redirect()->route('permissions.index');

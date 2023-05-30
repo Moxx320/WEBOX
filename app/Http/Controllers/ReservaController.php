@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Reserva;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 
 class ReservaController extends Controller
 {
     public function index()
     {
-        $reservas = Reserva::all();
+        $user = Auth::user();
+        $reservas = Reserva::where('username', $user->username)->get();
         return view('reservas.index', compact('reservas'));
     }
 
@@ -20,39 +23,52 @@ class ReservaController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $request->validate([
-            'tiempo_tolerancia' => 'required',
-            'cancelacion' => 'required|boolean',
-            'inicio_apartado' => 'required',
-            'fin_apartado' => 'required',
-            'fecha' => 'required',
-        ]);
+{
+    $user = Auth::user();
+    $username = $user->username;
+    $request->validate([
+        'tiempo_tolerancia' => 'required',
+        'cancelacion' => 'required|boolean',
+        'inicio_apartado' => 'required',
+        'fin_apartado' => 'required',
+        'fecha' => 'required',
+    ]);
 
-        Reserva::create($request->all());
+    Reserva::create([
+        'nombre_usuario' => $username,
+        'tiempo_tolerancia' => $request->tiempo_tolerancia,
+        'cancelacion' => $request->cancelacion,
+        'inicio_apartado' => $request->inicio_apartado,
+        'fin_apartado' => $request->fin_apartado,
+        'fecha' => $request->fecha,
+    ]);
 
-        return redirect()->route('reservas.index')->with('success', 'Apartado creado correctamente.');
-    }
+    return redirect()->route('reservas.index')->with('success', 'Apartado creado correctamente.');
+}
 
-    public function edit(Reserva $reserva)
-    {
-        return view('reservas.edit', compact('reserva'));
-    }
+public function update(Request $request, Reserva $reserva)
+{
+    $user = Auth::user();
+    $username = $user->username;
+    $request->validate([
+        'tiempo_tolerancia' => 'required',
+        'cancelacion' => 'required|boolean',
+        'inicio_apartado' => 'required',
+        'fin_apartado' => 'required',
+        'fecha' => 'required',
+    ]);
 
-    public function update(Request $request, Reserva $reserva)
-    {
-        $request->validate([
-            'tiempo_tolerancia' => 'required',
-            'cancelacion' => 'required|boolean',
-            'inicio_apartado' => 'required',
-            'fin_apartado' => 'required',
-            'fecha' => 'required',
-        ]);
+    $reserva->update([
+        'usuario_id' => $username,
+        'tiempo_tolerancia' => $request->tiempo_tolerancia,
+        'cancelacion' => $request->cancelacion,
+        'inicio_apartado' => $request->inicio_apartado,
+        'fin_apartado' => $request->fin_apartado,
+        'fecha' => $request->fecha,
+    ]);
 
-        $reserva->update($request->all());
-
-        return redirect()->route('reservas.index')->with('success', 'Apartado actualizado correctamente.');
-    }
+    return redirect()->route('reservas.index')->with('success', 'Apartado actualizado correctamente.');
+}
 
     public function destroy(Reserva $reserva)
     {

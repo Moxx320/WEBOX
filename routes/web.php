@@ -31,11 +31,8 @@ Route::get('/', function () {
 
     Route::resource('posts', App\Http\Controllers\PostController::class);
 
-
-
     Route::resource('permissions', App\Http\Controllers\PermissionController::class);
     Route::resource('roles', App\Http\Controllers\RoleController::class);
-
 
     Route::get('/reservas', [App\Http\Controllers\ReservaController::class, 'index'])->name('reservas.index');
     Route::get('/reservas/create', [App\Http\Controllers\ReservaController::class, 'create'])->name('reservas.create');
@@ -44,4 +41,5 @@ Route::get('/', function () {
     Route::put('/reservas/{reserva}', [App\Http\Controllers\ReservaController::class, 'update'])->name('reservas.update');
     Route::delete('/reservas/{reserva}', [App\Http\Controllers\ReservaController::class, 'destroy'])->name('reservas.destroy');
     
+    Route::get('/historial', [App\Http\Controllers\HistorialController::class, 'index'])->name('historial.index');
 });

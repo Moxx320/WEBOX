@@ -15,6 +15,7 @@ class CreateReservasTable  extends Migration
     {
         Schema::create('reservas', function (Blueprint $table) {
             $table->increments('folio');
+            $table->string('username')->unique();
             $table->time('tiempo_tolerancia');
             $table->tinyInteger('cancelacion');
             $table->time('inicio_apartado');
@@ -22,6 +23,7 @@ class CreateReservasTable  extends Migration
             $table->date('fecha');
             $table->char('estatus', 2)->default('DI');
             $table->timestamps();
+            $table->foreign('username')->references('username')->on('users');
         });
     }
 

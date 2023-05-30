@@ -14,6 +14,7 @@ class Reserva extends Model
     ];
 
     protected $fillable = [
+        'username',
         'tiempo_tolerancia',
         'cancelacion',
         'inicio_apartado',

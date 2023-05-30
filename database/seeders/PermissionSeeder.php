@@ -41,6 +41,8 @@ class PermissionSeeder extends Seeder
             'post_show',
             'post_edit',
             'post_destroy',
+
+            'historial_index',
         ];
 
         foreach ($permissions as $permission) {

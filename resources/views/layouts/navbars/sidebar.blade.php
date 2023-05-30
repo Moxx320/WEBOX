@@ -58,7 +58,14 @@
         </a>
       </li>
       @endcan
-     
+      @can('historial_index')
+      <li class="nav-item{{ $activePage == 'historial' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('historial.index') }}">
+          <i class="material-icons">library_books</i>
+            <p>{{ ('Historial') }}</p>
+      @endcan
+        </a>
+      </li>
     </ul>
   </div>
 </div>
