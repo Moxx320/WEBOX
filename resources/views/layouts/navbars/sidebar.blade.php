@@ -29,7 +29,7 @@
       @can('historial_index')
       <li class="nav-item{{ $activePage == 'historial' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('historial.index') }}">
-          <i class="material-icons">library_books</i>
+          <i class="material-icons">history</i>
             <p>{{ ('Historial de Apartados') }}</p>
         </a>
       </li>
