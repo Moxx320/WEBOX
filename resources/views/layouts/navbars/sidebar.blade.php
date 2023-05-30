@@ -25,7 +25,15 @@
           <i class="material-icons">content_paste</i>
           <p>{{ ('Apartado') }}</p>
         </a>
+      </li>      
+      @can('historial_index')
+      <li class="nav-item{{ $activePage == 'historial' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('historial.index') }}">
+          <i class="material-icons">library_books</i>
+            <p>{{ ('Historial de Apartados') }}</p>
+        </a>
       </li>
+      @endcan
       @can('user_index')
       <li class="nav-item{{ $activePage == 'users' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('users.index') }}">
@@ -57,12 +65,6 @@
             <p>{{ ('Roles') }}</p>
         </a>
       </li>
-      @endcan
-      @can('historial_index')
-      <li class="nav-item{{ $activePage == 'historial' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('historial.index') }}">
-          <i class="material-icons">library_books</i>
-            <p>{{ ('Historial') }}</p>
       @endcan
         </a>
       </li>
