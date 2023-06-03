@@ -42,4 +42,8 @@ Route::get('/', function () {
     Route::delete('/reservas/{reserva}', [App\Http\Controllers\ReservaController::class, 'destroy'])->name('reservas.destroy');
     
     Route::get('/historial', [App\Http\Controllers\HistorialController::class, 'index'])->name('historial.index');
+    
+    Route::get('/equipos', [App\Http\Controllers\EquipoController::class, 'index'])->name('equipos.index');
+    Route::get('/equipos/{id}/apartar', [App\Http\Controllers\EquipoController::class, 'apartar'])->name('equipos.apartar');
+
 });

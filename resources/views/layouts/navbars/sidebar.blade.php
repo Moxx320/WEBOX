@@ -34,19 +34,19 @@
       @endcan
         </a>
       </li>
+       @can('post_index')
+      <li class="nav-item{{ $activePage == 'equipos' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('equipos.index') }}">
+          <i class="material-icons">computer</i>
+            <p>{{ ('Equipos Activos') }}</p>
+        </a>
+      </li>
+      @endcan
       @can('user_index')
       <li class="nav-item{{ $activePage == 'users' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('users.index') }}">
           <i class="material-icons">library_books</i>
             <p>Registro de Usuarios</p>
-        </a>
-      </li>
-      @endcan
-      @can('post_index')
-      <li class="nav-item{{ $activePage == 'posts' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('posts.index') }}">
-          <i class="material-icons">computer</i>
-            <p>{{ ('Equipos Activos') }}</p>
         </a>
       </li>
       @endcan

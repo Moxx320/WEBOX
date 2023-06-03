@@ -18,6 +18,7 @@
 <p align="right"><a href="{{ route('reservas.create') }}"><button type="button" class="btn btn-success">Apartar Equipo</button></a></p>
 
 
+
 @if(session('success'))
     <div>{{ session('success') }}</div>
 @endif
