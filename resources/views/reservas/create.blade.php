@@ -42,8 +42,10 @@
     <td><input type="time" id="hora_inicio" name="hora_inicio" required></td>
     <td><input type="time" id="hora_fin" name="hora_fin" required></td>
     </tbody>
-    </table>        
-    <button id='boton_reserva' type="submit" class="btn btn-primary">Crear Reserva</button>
+    </table>
+    <p align= "right">
+            <button id='boton_reserva' type="submit" class="btn btn-primary">Crear Reserva</button>
+        </p>
                 </div>
               </div>
               <div class="card-footer mr-auto">
