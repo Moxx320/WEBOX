@@ -19015,4 +19015,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   right: 5px;
   font-weight: bold;
 }
+
+#equipo_id{
+  color:#666666;
+}
+
+#boton_reserva{
+  position: relative;
+  left: 850px;
+}
 /*# sourceMappingURL=dashboard-free.css.map */

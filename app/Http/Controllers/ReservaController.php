@@ -9,8 +9,19 @@ use Auth;
 
 class ReservaController extends Controller
 {
+    public function index()
+    {
+        $user = Auth::user();
+        $reservas = Reserva::where('username', $user->username)->get();
+        return view('reservas.index', compact('reservas'));
+    }
     public function create()
     {
+        $user = Auth::user();
+        $reservaExistente = Reserva::where('username', $user->username)->first();
+        if ($reservaExistente) {
+        return redirect()->back()->with('success', 'Actualmente tienes una reserva activa');
+}
         // Lógica para mostrar el formulario de creación de reserva
         $equipos = Equipo::all();
 
@@ -30,13 +41,17 @@ class ReservaController extends Controller
             'hora_inicio' => 'required',
             'hora_fin' => 'required',
         ]);
-
+        
+        $tolerancia = date('H:i', strtotime($data['hora_inicio'] . '+5 minutes'));
+        
         $reserva = new Reserva(); // Crear instancia del modelo Reserva
         $reserva->equipo_id = $data['equipo_id'];
         $reserva->fecha = $data['fecha'];
         $reserva->hora_inicio = $data['hora_inicio'];
         $reserva->hora_fin = $data['hora_fin'];
-        $reserva->usuario_id = Auth::user()->id;
+        $reserva->tiempo_tolerancia = $tolerancia;
+        $reserva->username = Auth::user()->username;
+
 
         // Guardar la reserva en la base de datos
         $reserva->save();
@@ -60,7 +75,7 @@ class ReservaController extends Controller
     public function destroy(Reserva $reserva)
     {
         // Validar que el usuario autenticado sea el propietario de la reserva
-        if (Auth::user()->id !== $reserva->usuario_id) {
+        if (Auth::user()->username !== $reserva->username) {
             return redirect()->back()->with('error', 'No tienes permiso para cancelar esta reserva');
         }
 
@@ -68,9 +83,6 @@ class ReservaController extends Controller
         $reserva->delete();
 
         // Resto de tu código...
-
-        return redirect()->back()->with('success', 'Reserva cancelada correctamente');
+        return redirect()->route('reserva.index')->with('success', 'Reserva cancelada correctamente');
     }
-
-
 }

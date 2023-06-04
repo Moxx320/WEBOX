@@ -4,6 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use App\Http\Controllers\ReservaController;
 
 class Kernel extends ConsoleKernel
 {
@@ -24,8 +25,11 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
-    }
+        $schedule->call([App\Http\Controllers\ReservaController::class, 'cancelarReservasVencidas'])->everySecond();
+        $schedule->call(function () {
+            $reservaController = new ReservaController();
+            $reservaController->cancelarReservasVencidas();
+        })->daily();    }
 
     /**
      * Register the commands for the application.

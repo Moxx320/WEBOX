@@ -20,8 +20,8 @@
             <p>{{ ('Inicio') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'equipos' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('equipos.index') }}">
+      <li class="nav-item{{ $activePage == 'reservas' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('reserva.index') }}">
           <i class="material-icons">content_paste</i>
             <p>{{ ('Reservacion') }}</p>
         </a>

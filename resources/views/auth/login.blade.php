@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="card-footer justify-content-center">
-                        <button href="/home" type="submit" class="btn btn-primary btn-link btn-lg">{{('Ingresar') }}</button>
+                        <button href="{{ route('home') }}" type="submit" class="btn btn-primary btn-link btn-lg">{{('Ingresar') }}</button>
                     </div>
                 </div>
             </form>

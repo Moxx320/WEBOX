@@ -22,6 +22,7 @@
                                         <thead class="text-primary">
                                             <tr>
                                                 <th>Reserva ID</th>
+                                                <th>Usuario que aparto</th>
                                                 <th>Equipo</th>
                                                 <th>Fecha</th>
                                                 <th>Hora Inicio</th>
@@ -33,6 +34,7 @@
                                             @forelse($reservas as $reserva)
                                             <tr>
                                                 <td>{{ $reserva->id }}</td>
+                                                <td>{{ $reserva->username }}</td>
                                                 <td>{{ $reserva->equipo->nombre }}</td>
                                                 <td>{{ $reserva->fecha }}</td>
                                                 <td>{{ $reserva->hora_inicio }}</td>

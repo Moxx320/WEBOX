@@ -10,14 +10,15 @@
                 <p class="card-text">Fecha: {{ $reserva->fecha }}</p>
                 <p class="card-text">Hora de inicio: {{ $reserva->hora_inicio }}</p>
                 <p class="card-text">Hora de fin: {{ $reserva->hora_fin }}</p>
-                <p class="card-text">Usuario: {{ $reserva->usuario->name }}</p>
+                <p class="card-text">Usuario: {{ $reserva->username }}</p>
                 <a href="{{ route('reserva.index') }}" class="btn btn-primary">Volver</a>
-            </div>
-            <form action="{{ route('reservas.destroy', $reserva->id) }}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-danger">Eliminar Reserva</button>
-            </form>            
+                            <form action="{{ route('reservas.destroy', $reserva->id) }}" method="post"
+                        onsubmit="return confirm('¿Desea cancelar su apartado?')" style="display: inline-block;">
+                        @csrf
+                        @method('DELETE')
+                        <a href="{{ route('reserva.index') }}"> <button type="submit" rel="tooltip" class="btn btn-danger">Cancelar Reserva</button>
+                      </form>    
+                    </div>
         </div>
     </div>
 @endsection

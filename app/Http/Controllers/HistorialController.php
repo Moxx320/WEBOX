@@ -12,7 +12,7 @@ class HistorialController extends Controller
     {
         abort_if(Gate::denies('historial_index'), 403);
 
-        $reservas = Reserva::all();
+        $reservas = Reserva::paginate(10);
 
         return view('historial.index', compact('reservas'));
     }
