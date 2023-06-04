@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
   <div class="container-fluid">
     <div class="navbar-wrapper">
-      <a class="navbar-brand" href="#">{{ $titlePage }}</a>
+      <a class="navbar-brand" href="{{ route('home') }}">{{ 'Inicio' }}</a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
     <span class="sr-only">Toggle navigation</span>
@@ -25,11 +25,11 @@
             <i class="material-icons">notifications</i>
             <span class="notification">1</span>
             <p class="d-lg-none d-md-block">
-              {{ __('Some Actions') }}
+              {{ ('Some Actions') }}
             </p>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="http://localhost:8000/posts">{{ ('Hay equipos disponibles') }}</a>
+            <a class="dropdown-item" href="{{ route('home') }}">{{ ('Hay equipos disponibles') }}</a>
           </div>
         </li>
         <li class="nav-item dropdown">

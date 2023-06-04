@@ -1,59 +1,37 @@
-@extends('layouts.main', ['activePage' => 'reservas', 'titlePage' => 'Seccion de de Reservas'])
-@section('content')
-<div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-header card-header-success">
-                    <h4 class="card-title">Crear Apartado</h4>
-                    <p class="card-category">Agendar</p>
-                  </div>
-                  <div class="card-body">
-             <!-- resources/views/reservas/create.blade.php -->
-<form action="{{ route('reservas.store') }}" method="POST">
-    @csrf
-<div class="table-responsive">
-<table class="table">
-<thead class="text-primary">
-    <thead>
-    <tr>
-    <th for="tiempo_tolerancia">Tiempo Tolerancia:</th>
-    <th for="inicio_apartado">Inicio Apartado:</th>
-    <th for="fin_apartado">Fin Apartado:</th>
-    <th for="fecha">Fecha:</th>
-    <th for="cancelacion">Cancelación:</th>
-    <tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td><input type="time" id="tiempo_tolerancia" name="tiempo_tolerancia" required></td>
-    <td><input type="time" id="inicio_apartado" name="inicio_apartado" required></td>
-    <td><input type="time" id="fin_apartado" name="fin_apartado" required></td>
-    <td><input type="date" id="fecha" name="fecha" required></td>
+@extends('layouts.app')
 
-    <td><select id="cancelacion" name="cancelacion" required>
-        <option value="0">No</option>
-        <option value="1">Sí</option>
-    </select></td>
-</form>
-</tr>
-</div>
-</tbody>
-</table>
-                  </div>
-                  <div class="card-footer mr-auto">
-                    <p><button id=boton_guardar type="submit" class="btn btn-success">Guardar</button></p>
-                    <p><a href="{{ route('reservas.index') }}"><button id=boton_volver type="button" class="btn btn-warning">Volver</button></a></p>
-                  </div>
-                </div>
-              </div>
+@section('content')
+    <div class="container">
+        <h1>Crear Reserva</h1>
+
+        <form action="{{ route('reservas.store') }}" method="POST">
+            @csrf
+
+            <div class="form-group">
+                <label for="equipo_id">Equipo:</label>
+                <select name="equipo_id" id="equipo_id" class="form-control">
+                    @foreach($equipos as $equipo)
+                        <option value="{{ $equipo->id }}">{{ $equipo->nombre }}</option>
+                    @endforeach
+                </select>
             </div>
-          </div>
-        </div>
-      </div>
+
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" name="fecha" id="fecha" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hora_inicio">Hora de inicio:</label>
+                <input type="time" name="hora_inicio" id="hora_inicio" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hora_fin">Hora de fin:</label>
+                <input type="time" name="hora_fin" id="hora_fin" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Crear Reserva</button>
+        </form>
     </div>
-</div>
 @endsection

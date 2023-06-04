@@ -17,13 +17,13 @@
       <li class="nav-item{{ $activePage == 'dashboard' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('home') }}">
           <i class="material-icons">home</i>
-            <p>{{ ('INICIO') }}</p>
+            <p>{{ ('Inicio') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'reservas' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('reservas.index') }}">
+      <li class="nav-item{{ $activePage == 'equipos' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('equipos.index') }}">
           <i class="material-icons">content_paste</i>
-          <p>{{ ('Apartado') }}</p>
+            <p>{{ ('Reservacion') }}</p>
         </a>
       </li>
       @can('historial_index')
@@ -31,16 +31,8 @@
         <a class="nav-link" href="{{ route('historial.index') }}">
           <i class="material-icons">history</i>
             <p>{{ ('Historial') }}</p>
-      @endcan
-        </a>
-      </li>
-       @can('post_index')
-      <li class="nav-item{{ $activePage == 'equipos' ? ' active' : '' }}">
-        <a class="nav-link" href="{{ route('equipos.index') }}">
-          <i class="material-icons">computer</i>
-            <p>{{ ('Equipos Activos') }}</p>
-        </a>
-      </li>
+          </a>
+        </li>
       @endcan
       @can('user_index')
       <li class="nav-item{{ $activePage == 'users' ? ' active' : '' }}">

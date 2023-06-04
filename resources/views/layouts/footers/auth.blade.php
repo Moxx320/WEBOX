@@ -4,7 +4,7 @@
       <ul>
         <li>
           <a href="https://ead.lerdo.tecnm.mx/moodle/">
-              {{ __('EAD TECNM CAMPUS LERDO') }}
+              {{ ('EAD TECNM CAMPUS LERDO') }}
           </a>
 
       <a href="https://ead.lerdo.tecnm.mx/moodle/" target="_blank"></a>

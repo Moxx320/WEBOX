@@ -21,25 +21,23 @@
                                     <table class="table">
                                         <thead class="text-primary">
                                             <tr>
-                                                <th>Folio</th>
-                                                <th>Usuario que apartó</th>
-                                                <th>Inicio de Apartado</th>
-                                                <th>Fin de Apartado</th>
+                                                <th>Reserva ID</th>
+                                                <th>Equipo</th>
                                                 <th>Fecha</th>
-                                                <th>Cancelación</th>
-                                                <th>Estatus</th>
+                                                <th>Hora Inicio</th>
+                                                <th>Hora Fin</th>
+                                                <th>Cancelacion</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @forelse($reservas as $reserva)
                                             <tr>
-                                                <td>{{ $reserva->folio }}</td>
-                                                <td>{{ $reserva->username }}</td>
-                                                <td>{{ $reserva->inicio_apartado }}</td>
-                                                <td>{{ $reserva->fin_apartado }}</td>
+                                                <td>{{ $reserva->id }}</td>
+                                                <td>{{ $reserva->equipo->nombre }}</td>
                                                 <td>{{ $reserva->fecha }}</td>
+                                                <td>{{ $reserva->hora_inicio }}</td>
+                                                <td>{{ $reserva->hora_fin }}</td>
                                                 <td>{{ $reserva->cancelacion ? 'Sí' : 'No' }}</td>
-                                                <td>{{ $reserva->estatus }}</td>
                                             </tr>
                                             @empty
                                             <tr>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddNombreUsuarioToReservas extends Migration
+class CreateEquiposTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AddNombreUsuarioToReservas extends Migration
      */
     public function up()
     {
-        Schema::table('reservas', function (Blueprint $table) {
-            $table->string('nombre_usuario')->nullable();
+        Schema::create('equipos', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+            $table->boolean('disponible')->default(true);
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class AddNombreUsuarioToReservas extends Migration
      */
     public function down()
     {
-        Schema::table('reservas', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('equipos');
     }
 }

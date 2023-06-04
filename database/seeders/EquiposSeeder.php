@@ -14,42 +14,54 @@ class EquiposSeeder extends Seeder
      */
     public function run()
     {
+        // Datos de ejemplo para los equipos
         $equipos = [
-            'Equipo 1',
-            'Equipo 2',
-            'Equipo 3',
-            'Equipo 4',
-            'Equipo 5',
-            'Equipo 6',
-            'Equipo 7',
-            'Equipo 8',
-            'Equipo 9',
-            'Equipo 10',
-            'Equipo 11',
-            'Equipo 12',
-            'Equipo 13',
-            'Equipo 14',
-            'Equipo 15',
-            'Equipo 16',
-            'Equipo 17',
-            'Equipo 18',
-            'Equipo 19',
-            'Equipo 20',
-            'Equipo 21',
-            'Equipo 22',
-            'Equipo 23',
-            'Equipo 24',
-            'Equipo 25',
-            'Equipo 26',
-            'Equipo 27',
-            'Equipo 28',
-            'Equipo 29',
-            'Equipo 30',
+            [
+                'nombre' => 'Equipo 1',
+                'disponible' => true,
+            ],
+            [
+                'nombre' => 'Equipo 2',
+                'disponible' => true,
+            ],
+            [
+                'nombre' => 'Equipo 3',
+                'disponible' => true,
+            ],
+            [
+                'nombre' => 'Equipo 4',
+                'disponible' => true,
+            ],
+            [
+                'nombre' => 'Equipo 5',
+                'disponible' => true,
+            ],
+            [
+                'nombre' => 'Equipo 6',
+                'disponible' => true,
+            ],
+            [
+                'nombre' => 'Equipo 7',
+                'disponible' => true,
+            ],
+            [
+                'nombre' => 'Equipo 8',
+                'disponible' => true,
+            ],
+            [
+                'nombre' => 'Equipo 9',
+                'disponible' => true,
+            ],
+            [
+                'nombre' => 'Equipo 10',
+                'disponible' => true,
+            ],
+            // Agrega más equipos según tus necesidades
         ];
-        
+
+        // Crear los registros de equipos
         foreach ($equipos as $equipo) {
-            Equipo::create(['nombre' => $equipo]);
+            Equipo::create($equipo);
         }
-        
     }
 }

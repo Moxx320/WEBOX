@@ -7,19 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reserva extends Model
 {
-    protected $primaryKey = 'folio';
+    use HasFactory;
 
-    protected $casts = [
-        'cancelacion' => 'boolean',
-    ];
+    protected $fillable = ['equipo_id', 'usuario_id', 'fecha', 'hora_inicio', 'hora_fin'];
 
-    protected $fillable = [
-        'username',
-        'tiempo_tolerancia',
-        'cancelacion',
-        'inicio_apartado',
-        'fin_apartado',
-        'fecha',
-        'estatus',
-    ];
+    public function equipo()
+    {
+        return $this->belongsTo(Equipo::class);
+    }
+
+    // Agrega si tienes una tabla de usuarios:
+    public function usuario()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

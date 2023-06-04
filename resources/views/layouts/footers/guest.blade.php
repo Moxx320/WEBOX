@@ -4,7 +4,7 @@
             <ul>
                 <li>
                     <a href="https://www.lerdo.tecnm.mx/">
-                        {{ __('TECNM LERDO') }}
+                        {{ ('TECNM LERDO') }}
                     </a>
                 </li>
             
@@ -14,7 +14,7 @@
         <script>
             document.write(new Date().getFullYear())
         </script>
-        <a href="https://www.creative-tim.com" target="_blank">WEBOX</a>
+        <a href="#" target="_blank">WEBOX</a>
         </div>
     </div>
 </footer>

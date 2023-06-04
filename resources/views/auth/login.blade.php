@@ -1,4 +1,4 @@
-@extends('layouts.main', ['class' => 'off-canvas-sidebar', 'activePage' => 'login', 'title' => __('WEBOX')])
+@extends('layouts.main', ['class' => 'off-canvas-sidebar', 'activePage' => 'login', 'title' => ('WEBOX')])
 
 @section('content')
 <div class="container" style="height: auto;">
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="card-footer justify-content-center">
-                        <button href="/home" type="submit" class="btn btn-primary btn-link btn-lg">{{ __('Ingresar') }}</button>
+                        <button href="/home" type="submit" class="btn btn-primary btn-link btn-lg">{{('Ingresar') }}</button>
                     </div>
                 </div>
             </form>
