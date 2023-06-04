@@ -16308,12 +16308,12 @@ legend {
 }
 
 a {
-  color: #4caf50;
+  color: #ffffff;
 }
 
 a:hover,
 a:focus {
-  color: #337a36;
+  color: #4caf50;
   text-decoration: none;
 }
 
@@ -19020,5 +19020,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color:#666666;
 }
 
+#hora_inicio{
+  color:#666666;
+}
+
+#hora_fin{
+  color:#666666;
+}
 
 /*# sourceMappingURL=dashboard-free.css.map */

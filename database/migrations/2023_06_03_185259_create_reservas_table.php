@@ -21,6 +21,7 @@ class CreateReservasTable extends Migration
             $table->time('hora_inicio');
             $table->time('hora_fin');
             $table->time('tiempo_tolerancia');
+            $table->boolean('cancelacion')->default(0); // Valor predeterminado establecido a 0
             $table->timestamps();
             $table->foreign('equipo_id')->references('id')->on('equipos');
             $table->foreign('username')->references('username')->on('users');

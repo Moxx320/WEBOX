@@ -9,14 +9,21 @@
               <div class="col-md-12">
                 <div class="card">
                   <div class="card-header card-header-success">
-                    <h4 class="card-title">Lista de Apartados</h4>
-                    <p class="card-category">Equipos apartados</p>
+                    <h4 class="card-title">Reservaciones</h4>
+                    <p class="card-category">Tu Reserva Activa</p>
                   </div>
                   <div class="card-body">
-             <!-- resources/views/reservas/index.blade.php -->
 
-<p align="right"><a href="{{ route('reservas.create') }}"><button type="button" class="btn btn-success">Apartar Equipo</button></a></p>
-
+<p align="right"><a href="{{ route('horarios.index') }}"><button type="button" class="btn btn-info">Consulta los Horarios Reservados</button></a><a href="{{ route('reservas.create') }}"><button type="button" class="btn btn-success">Reservar Equipo</button></a></p>
+                  @if ($errors->any())
+                              <div class="alert alert-danger">
+                              <ul>
+                                  @foreach ($errors->all() as $error)
+                                  <li>{{ $error }}</li>
+                                  @endforeach
+                              </ul>
+                              </div>
+                            @endif
 
 
 @if(session('success'))
@@ -32,25 +39,20 @@
                                     <th>Equipo</th>
                                     <th>Fecha</th>
                                     <th>Hora Inicio</th>
-                                    <th>Hora Fin</th>
                                     <th>Tiempo de Tolerancia</th>
+                                    <th>Hora Fin</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            @forelse($reservas as $reserva)
+                            @forelse($reservasActivas as $reserva)
                                 <tr>
                                     <td>{{ $reserva->id }}</td>
                                     <td>{{ $reserva->equipo->nombre }}</td>
                                     <td>{{ $reserva->fecha }}</td>
                                     <td>{{ $reserva->hora_inicio }}</td>
-                                    <td>{{ $reserva->hora_fin }}</td>
                                     <td>{{ $reserva->tiempo_tolerancia }}</td>
+                                    <td>{{ $reserva->hora_fin }}</td>
             <td>
-            <form action="{{ route('reserva.show', $reserva->id) }}" method="get">
-                        <button type="submit" rel="tooltip" class="btn btn-warning">
-                          <i class="material-icons">remove_red_eye</i>
-                        </button>
-                </form>
                 <form action="{{ route('reservas.destroy', $reserva->id) }}" method="post"
                         onsubmit="return confirm('¿Desea cancelar su apartado?')" style="display: inline-block;">
                         @csrf
@@ -63,7 +65,7 @@
         </tr>
         @empty
         <tr>
-            <td colspan="2">No hay apartados actualmente.</td>
+            <td colspan="2">No hay apartados activos actualmente.</td>
         </tr>
         @endforelse
     </tbody>

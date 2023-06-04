@@ -10,7 +10,7 @@ class Equipo extends Model
     use HasFactory;
 
     protected $fillable = ['nombre', 'disponible'];
-
+    
     public function reservas()
     {
         return $this->hasMany(Reserva::class);
