@@ -36,12 +36,6 @@ class PermissionSeeder extends Seeder
             'user_edit',
             'user_destroy',
 
-            'post_index',
-            'post_create',
-            'post_show',
-            'post_edit',
-            'post_destroy',
-
             'historial_index',
         ];
 

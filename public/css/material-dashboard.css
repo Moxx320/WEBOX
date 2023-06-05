@@ -19028,4 +19028,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color:#666666;
 }
 
+.card-category{
+  text-align: center;
+}
+
+.card-title{
+  text-align: center;
+}
+
+.card-email{
+  text-align: center;
+}
 /*# sourceMappingURL=dashboard-free.css.map */

@@ -51,5 +51,4 @@ Route::get('/', function () {
     Route::get('/horarios', [App\Http\Controllers\HorariosDisponiblesController::class, 'index'])->name('horarios.index');
     
     Route::get('/my', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile.index');
-    Route::get('/my/edit', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/my/update', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
