@@ -99,7 +99,7 @@ class ReservaController extends Controller
             return redirect()->back()->withErrors(['error' => 'La duración máxima permitida para una reserva es de 2 horas']);
         }
 
-    $fechaActual = date('Y-m-d');
+    $fechaActual = Carbon::now('America/Mexico_City')->format('Y-m-d');
     $horaActual = Carbon::now('America/Mexico_City')->subHour()->format('H:i');
     $data = $request->validate([
         'equipo_id' => 'required',

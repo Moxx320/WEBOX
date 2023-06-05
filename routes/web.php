@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HistorialController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,14 @@ use App\Http\Controllers\HistorialController;
 */
 
 Route::get('/', function () {
+    $user = Auth::user();
+    if(!$user){
     return view('auth/login');
+    }
+    else{
+        return view('home');
+    }
 });
-   
-
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     Route::get('/users/create', [App\Http\Controllers\UserController::class, 'create'])->name('users.create');
