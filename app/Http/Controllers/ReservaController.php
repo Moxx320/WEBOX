@@ -51,10 +51,9 @@ class ReservaController extends Controller
         $horaInicio = $request->input('hora_inicio');
         $horaFin = $request->input('hora_fin');
     
-        // Verificar si hay alguna reserva existente que se superponga con los mismos parámetros
         $reservasExistente = Reserva::where('equipo_id', $equipoId)
             ->where('fecha', $fecha)
-            ->where('cancelacion', false) // Excluir reservas canceladas
+            ->where('cancelacion', false)
             ->where(function ($query) use ($horaInicio, $horaFin) {
                 $query->where(function ($query) use ($horaInicio, $horaFin) {
                     $query->where(function ($query) use ($horaInicio, $horaFin) {
@@ -86,7 +85,7 @@ class ReservaController extends Controller
     $disponibilidad = $this->checkReservaDisponibilidad($request);
 
         if (!$disponibilidad) {
-            $mensajeError = 'El horario de reserva se superpone con otra reserva existente. Por favor, elija un horario diferente. Consulte los equipos reservados <a href="' . route('horarios.index') . '"><strong><u>AQUÍ</u></strong></a>.';
+            $mensajeError = 'El horario de reserva se interpone con otra reserva existente. Por favor, elija un horario diferente. Consulte los equipos reservados <a href="' . route('horarios.index') . '"><strong><u>AQUÍ</u></strong></a>.';
             return redirect()->back()->with(['error' => $mensajeError]);
         }
 

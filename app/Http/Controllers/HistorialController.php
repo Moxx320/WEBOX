@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Reserva;
 use Illuminate\Support\Facades\Gate;
+use Carbon\Carbon;
+use App\Models\Equipo;
 
 class HistorialController extends Controller
 {
@@ -19,6 +21,7 @@ class HistorialController extends Controller
     
         return view('historial.index', compact('reservas', 'sort', 'direction'));
     }
+
     public function reordenar(Request $request)
 {
     $columna = $request->input('columna');
@@ -30,4 +33,15 @@ class HistorialController extends Controller
 
     return view('historial.index', compact('reservas'));
 }
+public function filtro()
+{
+    $equipos = Equipo::with('reservas')
+        ->whereHas('reservas', function ($query) {
+            $query->where('cancelacion', false);
+        })
+        ->get();
+
+    return view('historial.filtro', compact('equipos'));
+}
+    
 }

@@ -13,6 +13,9 @@
                                 <p class="card-category">Equipos apartados</p>
                             </div>
                             <div class="card-body">
+
+                                <p align="right"><a href="{{ route('historial.filtro') }}"><button type="button" class="btn btn-info">Filtro</button></a>
+
     @if(session('success'))
     <div>{{ session('success') }}</div>
     @endif
@@ -34,7 +37,7 @@
         </th>
         <th>
             <a href="{{ route('historial.index', ['sort' => 'username', 'direction' => $sort === 'username' && $direction === 'asc' ? 'desc' : 'asc']) }}">
-                Usuario que aparto
+                Usuario que apartó
                 @if ($sort === 'username')
                 @if ($direction === 'asc')
                 <i class="material-icons">arrow_drop_up</i>

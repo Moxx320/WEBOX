@@ -40,6 +40,7 @@ Route::get('/', function () {
     
     Route::get('/historial', [App\Http\Controllers\HistorialController::class, 'index'])->name('historial.index');
     Route::get('/historial/reordenar', [HistorialController::class, 'reordenar'])->name('historial.reordenar');
+    Route::get('/historial/hoy', [App\Http\Controllers\HistorialController::class, 'filtro'])->name('historial.filtro');
     
     Route::get('/reservas/create', [App\Http\Controllers\ReservaController::class, 'create'])->name('reservas.create');
     Route::delete('/reservas/{reserva}', [App\Http\Controllers\ReservaController::class, 'destroy'])->name('reservas.destroy');
@@ -49,6 +50,7 @@ Route::get('/', function () {
     Route::post('/reservas/validar', [App\Http\Controllers\ReservaController::class, 'validar'])->name('reservas.validar');
 
     Route::get('/horarios', [App\Http\Controllers\HorariosDisponiblesController::class, 'index'])->name('horarios.index');
+
     
     Route::get('/my', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile.index');
     Route::put('/my/update', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
