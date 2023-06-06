@@ -34,7 +34,7 @@
                       </div>
                     </p>
                     <div class="card-description">
-                      Dentro de este campo se registra fecha de creacion del usuario
+                      <h5>Usuario We-Box</h5>
                     </div>
                   </div>
                   <div class="card-footer">

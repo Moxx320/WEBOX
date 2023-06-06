@@ -8,7 +8,7 @@
           <!--Header-->
           <div class="card-header card-header-success">
             <h4 class="card-title">Roles</h4>
-            <p class="card-category">Vista detallada del rol {{ $role->name }}</p>
+            <p class="card-category">Detalles del rol Administrador</p>
           </div>
           <!--End header-->
           <!--Body-->
@@ -26,12 +26,13 @@
                         <div class="block block-four"></div>
                         <a href="#">
                           <img class="avatar" src="{{ asset('/img/default-avatar.png') }}" alt="">
-                          <h5 class="title mt-3">Permisos de: {{ $role->name }}</h5>
+                          <h5 class="title mt-3">Permisos de: Administrador</h5>
                         </a>
                         <p class="description">
-                          {{ ('Descripcion de rol') }} <br>
-                          {{ $role->guard_name }} <br>
+                          {{ ('Fecha de creacion') }}
+                          <br>
                           {{ $role->created_at }}
+                          <br>
                         </p>
                       </div>
                     </p>
@@ -39,7 +40,7 @@
                       @forelse ($role->permissions as $permission)
                           <span class="badge rounded-pill bg-dark text-white">{{ $permission->name }}</span>
                       @empty
-                          <span class="badge badge-danger bg-danger">No permissions</span>
+                          <span class="badge badge-danger bg-danger">Sin Permisos</span>
                       @endforelse
                     </div>
                   </div>

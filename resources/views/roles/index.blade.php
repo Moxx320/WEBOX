@@ -39,7 +39,7 @@
                       @forelse ($role->permissions as $permission)
                           <span class="badge badge-info">{{ $permission->name }}</span>
                       @empty
-                          <span class="badge badge-danger">No permission added</span>
+                          <span class="badge badge-danger">Permisos no asignados</span>
                       @endforelse
                     </td>
                     <td class="td-actions text-right">
@@ -53,7 +53,7 @@
                     @endcan
                     @can('role_destroy')
                       <form action="{{ route('roles.destroy', $role->id) }}" method="post"
-                        onsubmit="return confirm('areYouSure')" style="display: inline-block;">
+                        onsubmit="return confirm('¿Estas seguro?')" style="display: inline-block;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" rel="tooltip" class="btn btn-danger">
