@@ -9,12 +9,33 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header card-header-success">
-                                <h4 class="card-title">Historial de Apartados</h4>
-                                <p class="card-category">Equipos apartados</p>
+                                <h4 class="card-title">Historial de Reservas</h4>
+                                <p class="card-category">Historial de todos los equipos reservados</p>
                             </div>
-                            <div class="card-body">
-
-                                <p align="right"><a href="{{ route('historial.filtro') }}"><button type="button" class="btn btn-info">Filtro</button></a>
+                            <div class="card-body">                                     
+                            <form action="{{ route('historial.filtros') }}" method="GET">
+                                <h6>Filtrar por:</h6>
+                                    <div class="form-row">
+                                        <div class="col-md-2 mb-3">
+                                            <label for="username">ID de Reserva:</label>
+                                            <input type="text" class="form-control" id="id" name="id" value="{{ request('id') }}">
+                                        </div>
+                                        <div class="col-md-2 mb-3">
+                                            <label for="username">Usuario:</label>
+                                            <input type="text" class="form-control" id="username" name="username" value="{{ request('username') }}">
+                                        </div>
+                                        <div  class="col-md-2 mb-3">
+                                            <label for="equipo">Equipo:</label>
+                                            <input type="text" class="form-control" id="equipo" name="equipo" value="{{ request('equipo') }}">
+                                        </div>
+                                        <div class="col-md-2 mb-3">
+                                            <label for="fecha">Fecha:</label>
+                                            <input type="text" class="form-control" id="fecha" name="fecha" value="{{ request('fecha') }}">
+                                        </div>                            
+                                        <p align="left" ><a><button type="submit" class="btn btn-secondary">Filtrar</button></a></p>
+                                        <p align="left" class="col-md-2"><a href="{{ route('historial.filtro') }}"><button type="button" class="btn btn-success">Reservaciones de hoy</button></a></p>           
+                                        </div>
+                                    </form>
 
     @if(session('success'))
     <div>{{ session('success') }}</div>

@@ -14,7 +14,8 @@
                   </div>
                   <div class="card-body">
 
-<p align="right"><a href="{{ route('horarios.index') }}"><button type="button" class="btn btn-info">Consulta los Horarios Reservados</button></a><a href="{{ route('reservas.create') }}"><button type="button" class="btn btn-success">Reservar Equipo</button></a></p>
+<p align="right"><a href="{{ route('horarios.index') }}"><button type="button" class="btn btn-info">Consulta los Horarios Reservados</button></a>
+<a href="{{ route('reservas.create') }}"><button type="button" class="btn btn-success">Reservar Equipo</button></a></p>
                   @if ($errors->any())
                               <div class="alert alert-danger">
                               <ul>

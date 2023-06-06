@@ -39,6 +39,7 @@ Route::get('/', function () {
     Route::resource('roles', App\Http\Controllers\RoleController::class);
     
     Route::get('/historial', [App\Http\Controllers\HistorialController::class, 'index'])->name('historial.index');
+    Route::get('/historial/filtros', [App\Http\Controllers\HistorialController::class, 'filtros'])->name('historial.filtros');
     Route::get('/historial/reordenar', [HistorialController::class, 'reordenar'])->name('historial.reordenar');
     Route::get('/historial/hoy', [App\Http\Controllers\HistorialController::class, 'filtro'])->name('historial.filtro');
     

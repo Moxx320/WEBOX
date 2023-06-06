@@ -172,7 +172,7 @@ class ReservaController extends Controller
         
         // Definir el horario de apertura y cierre
         $horaApertura = strtotime('08:00');
-        $horaCierre = strtotime('20:00');
+        $horaCierre = strtotime('23:45');
         
         // Calcular los intervalos de 15 minutos dentro del horario
         $horaActual = $horaApertura;

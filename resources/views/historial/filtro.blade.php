@@ -7,60 +7,35 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-success">
-                        <h4 class="card-title">Horarios Reservados</h4>
-                        <p class="card-category">Consulta los horarios ya ocupados de cada equipo</p>
+                        <h4 class="card-title">Reservaciones de Hoy</h4>
+                        <p class="card-category">Consulta las reservaciones activas del dia de hoy</p>
                     </div>
                     <div class="card-body">
-                        <div class="accordion" id="horariosAccordion">
-                            @foreach($equipos as $equipo)
-                            <div class="card">
-                                <div class="card-header" id="heading{{ $equipo->id }}">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ $equipo->id }}" aria-expanded="true" aria-controls="collapse{{ $equipo->id }}">
-                                            {{ $equipo->nombre }}
-                                        </button>
-                                    </h5>
-                                </div>
-
-                                <div id="collapse{{ $equipo->id }}" class="collapse" aria-labelledby="heading{{ $equipo->id }}" data-parent="#horariosAccordion">
-                                    <div class="card-body">
-                                        @if($equipo->reservas->isEmpty())
-                                            <p>No hay horarios disponibles para este equipo.</p>
-                                        @else
-                                            <table class="table">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Usuario que apartó</th>
-                                                        <th>Fecha que apartó</th>
-                                                        <th>Hora Inicio</th>
-                                                        <th>Hora Fin</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    @forelse($equipo->reservas as $reserva)
-                                                        @if(!$reserva->cancelacion)
-                                                            <tr>
-                                                <td>{{ $reserva->username }}</td>
-                                                <td>{{ $reserva->fecha }}</td>
-                                                <td>{{ $reserva->hora_inicio }}</td>
-                                                <td>{{ $reserva->hora_fin }}</td>
-                                                            </tr>
-                                                        @endif
-                                                    @empty
-                                                        <tr>
-                                                            <td colspan="3">No hay apartados activos actualmente.</td>
-                                                        </tr>
-                                                    @endforelse
-                                                </tbody>
-                                            </table>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
-                        @if($equipos->isEmpty())
-                            <p>Actualmente no hay horarios reservados.</p>
+                        @if($reservas->isEmpty())
+                            <p>No hay horarios disponibles para este equipo.</p>
+                        @else
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Equipo</th>
+                                        <th>Usuario que apartó</th>
+                                        <th>Fecha que apartó</th>
+                                        <th>Hora Inicio</th>
+                                        <th>Hora Fin</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($reservas as $reserva)
+                                        <tr>
+                                            <td>{{ $reserva->equipo->nombre }}</td>
+                                            <td>{{ $reserva->username }}</td>
+                                            <td>{{ $reserva->fecha }}</td>
+                                            <td>{{ $reserva->hora_inicio }}</td>
+                                            <td>{{ $reserva->hora_fin }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
                         @endif
                     </div>
                 </div>

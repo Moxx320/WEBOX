@@ -50,8 +50,7 @@
                                     </div>
                                 </div>
                                 <div class="row mt-4">
-                                    <div class="col-md-12">
-                                        <a href="{{ route('profile.index') }}" class="btn btn-primary">Cancelar</a>
+                                    <div align= "center" class="col-md-12">
                                         <button type="submit" class="btn btn-success">Guardar cambios</button>
                                     </div>
                                 </div>

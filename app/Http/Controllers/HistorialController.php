@@ -35,13 +35,47 @@ class HistorialController extends Controller
 }
 public function filtro()
 {
-    $equipos = Equipo::with('reservas')
-        ->whereHas('reservas', function ($query) {
-            $query->where('cancelacion', false);
-        })
-        ->get();
+    $filtroFecha = Carbon::now('America/Mexico_City')->format('Y-m-d');
 
-    return view('historial.filtro', compact('equipos'));
-}
+    $reservas = Reserva::query()
+        ->where('cancelacion', false)
+        ->whereDate('fecha', '=', $filtroFecha)
+        ->get();
     
+
+    return view('historial.filtro', compact('reservas'));
+}
+public function filtros(Request $request)
+{
+    $filtroId = $request->input('id');
+    $filtroUsuario = $request->input('username');
+    $filtroFecha = $request->input('fecha');
+    $filtroEquipo = $request->input('equipo');
+
+    $reservas = Reserva::query();
+
+    if ($filtroId) {
+        $reservas->where('id', 'LIKE', '%' . $filtroId . '%');
+    }
+
+    if ($filtroUsuario) {
+        $reservas->where('username', 'LIKE', '%' . $filtroUsuario . '%');
+    }
+
+    if ($filtroFecha) {
+        $reservas->whereDate('fecha', '=', $filtroFecha);
+    }
+
+    if ($filtroEquipo) {
+        $reservas->whereHas('equipo', function ($query) use ($filtroEquipo) {
+            $query->where('nombre', 'LIKE', '%' . $filtroEquipo . '%');
+        });
+    }
+
+    $reservas = $reservas->paginate(10);
+    $sort = $request->input('sort', 'id');
+    $direction = $request->input('direction', 'asc');
+
+    return view('historial.index', compact('reservas', 'sort', 'direction'));
+}
 }
